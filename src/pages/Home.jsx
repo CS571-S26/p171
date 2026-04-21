@@ -1,4 +1,5 @@
 import { Container, Row, Col, Button, Card } from "react-bootstrap";
+import Chatbot from "../components/Chatbot"; // add this import
 
 export default function Home() {
   return (
@@ -52,19 +53,15 @@ export default function Home() {
       </Row>
 
       {/* INTERACTIVE FEATURE */}
-      <Row className="text-center">
-        <Col>
-          <h3>Schedule a Call</h3>
-          <p>Want to connect? Book a time with me!</p>
+     
 
-          <Button
-            variant="primary"
-            onClick={() => alert("Calendar feature coming soon!")}
-          >
-            Book a Time
-          </Button>
-        </Col>
-      </Row>
+
+<Row>
+  <Col>
+    <h3 className="text-center mb-3">Ask Me Anything</h3>
+    <Chatbot />
+  </Col>
+</Row>
 
     </Container>
   );
