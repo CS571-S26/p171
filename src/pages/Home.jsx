@@ -1,5 +1,6 @@
 import { Container, Row, Col, Button, Card } from "react-bootstrap";
-import Chatbot from "../components/Chatbot"; // add this import
+import Chatbot from "../components/Chatbot"; 
+import TypingAnimation from "../components/TypingAnimation";
 
 export default function Home() {
   return (
@@ -7,14 +8,14 @@ export default function Home() {
       
       {/* HERO SECTION */}
       <Row className="text-center mb-5">
-        <Col>
-          <h1>Hi, I’m Eva 👋</h1>
-          <p>
-            I’m a Computer Science student interested in AI, design, and building
-            impactful technology.
-          </p>
-        </Col>
-      </Row>
+  <Col>
+    <h1>Hi, I'm Eva 👋</h1>
+    <p>I'm a <strong><TypingAnimation /></strong> interested in AI, design, and building impactful technology.</p>
+    <a href="/p171/Eva_Skarabot_Resume2026.pdf" download>
+      <Button variant="primary">Download Resume</Button>
+    </a>
+  </Col>
+</Row>
 
       {/* NAVIGATION GUIDE */}
       <Row className="mb-5">

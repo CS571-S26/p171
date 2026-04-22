@@ -121,9 +121,15 @@
 
 // export default App
 import AppRouter from "./router/AppRouter";
+import SocialLinks from "./components/SocialLinks";
 
 function App() {
-  return <AppRouter />;
+  return (
+    <>
+      <AppRouter />
+      <SocialLinks />
+    </>
+  );
 }
 
 export default App;
