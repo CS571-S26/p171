@@ -122,11 +122,12 @@
 // export default App
 import AppRouter from "./router/AppRouter";
 import SocialLinks from "./components/SocialLinks";
-
+import ScrollToTop from "./components/ScrollToTop";
 function App() {
   return (
     <>
       <AppRouter />
+      <ScrollToTop />
       <SocialLinks />
     </>
   );

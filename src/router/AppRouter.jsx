@@ -5,6 +5,7 @@ import Home from "../pages/Home";
 import About from "../pages/About";
 import Projects from "../pages/Projects";
 import Blog from "../pages/Blog";
+import ProjectDetails from "../pages/ProjectDetails";
 
 export default function AppRouter() {
   return (
@@ -15,6 +16,7 @@ export default function AppRouter() {
         <Route path="/about" element={<About />} />
         <Route path="/projects" element={<Projects />} />
         <Route path="/blog" element={<Blog />} />
+        <Route path="/projects/:id" element={<ProjectDetails />} />
       </Routes>
     </>
   );

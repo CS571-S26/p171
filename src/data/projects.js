@@ -1,12 +1,4 @@
-import { useState } from "react";
-import { ButtonGroup, Button } from "react-bootstrap";
-import ProjectCard from "../components/ProjectCard";
-import projects from "../data/projects";
-
-export default function Projects() {
-  const [activeFilter, setActiveFilter] = useState("All");
-
-  const projects = [
+const projects = [
     {
       id:"portfolio-website",
       title: "Portfolio Website",
@@ -26,7 +18,9 @@ export default function Projects() {
       longDescription:
         "Awarded a full scholarship as an AI/ML Scholar to develop GreenGuide, an AI-powered chatbot providing eco-friendly travel recommendations. Built in 3 days as part of a team — created wireframes, divided tasks, and pitched the project to software engineers and managers. Deployed on Hugging Face Spaces.",
       techStack: ["Python", "HuggingFace", "HTML", "CSS"],
-      images: [ "/p171/images/green-guide.png"],
+      images: [
+        "/p171/images/green-guide.png"
+      ],
       link: "https://huggingface.co/spaces/GreenGuide/GreenGuide_2/tree/main",
     },
     {
@@ -64,38 +58,4 @@ export default function Projects() {
     },
   ];
 
-  const FILTERS = ["All", "Development", "Research", "Leadership"];
-
-  const filtered = activeFilter === "All"
-  ? projects
-  : projects.filter(p => p.categories.includes(activeFilter));
-
-  return (
-    <div className="py-4">
-      {/* Filter buttons */}
-      <div className="d-flex justify-content-center gap-2 mb-4">
-  {FILTERS.map(filter => (
-    <Button
-      key={filter}
-      variant={activeFilter === filter ? "primary" : "outline-primary"}
-      className="rounded-pill"
-      onClick={() => setActiveFilter(filter)}
-    >
-      {filter}
-    </Button>
-  ))}
-</div>
-
-      {/* Project cards */}
-      <div className="d-flex flex-wrap justify-content-center">
-        {filtered.length > 0 ? (
-          filtered.map((proj, idx) => (
-            <ProjectCard key={idx} project={proj} />
-          ))
-        ) : (
-          <p className="text-muted mt-5">No projects in this category yet.</p>
-        )}
-      </div>
-    </div>
-  );
-}
+  export default projects;
